@@ -1,0 +1,11 @@
+---
+title: "School accessibility in Sao Paulo"
+author: "Ana Moreno and Robin Lovelace"
+date: "Monday, September 21, 2015"
+output: pdf_document
+---
+
+# Introduction
+
+Blah blah
+
