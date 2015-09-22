@@ -1,11 +1,36 @@
 ---
-title: "School accessibility in Sao Paulo"
+title: "School accessibility  in Sao Paulo"
+title: "School accessibility: a new index with a case study of enrollment and academic performance in Sao Paulo"
 author: "Ana Moreno and Robin Lovelace"
 date: "Monday, September 21, 2015"
 output: pdf_document
 ---
 
+# Abstract
+
+Travel to school is an everyday reality for millions of young people around the world.
+The mode, duration, levels 
+
+Access to high quality quality schools is highly variable across geographical
+space so travel options are vital for ensuring a more equitable supply of
+educational opportunity to diverse groups. Conversely, poor accessibility
+to deprived area can reinforce social inequalities, with long-term implications.
+
+Based on these emerging findings, this paper sets out a school accessibility index.
+This index is based on current travel patterns, local travel infrastructure serving the school
+catchment and the provision of travel services such as public transport links.
+Using data from the Household Travel Survey (2007 and 2012), the School Census
+and electronic card data, we apply this metric to schools in Sao Paulo.
+
+
+
+Its impact on the social background of school attendees.
+A wider aim of this paper is to explore the potential links between accessibility
+and academic acheivement and opportunities. 
+
 # Introduction
 
 Blah blah
+
+
 
