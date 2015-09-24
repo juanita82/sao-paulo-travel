@@ -1,36 +1,59 @@
 ---
-title: "School accessibility  in Sao Paulo"
-title: "School accessibility: a new index with a case study of enrollment and academic performance in Sao Paulo"
+title: "School accessibility: a new index applied to enrollment and performance inequalities in Sao Paulo"
 author: "Ana Moreno and Robin Lovelace"
-date: "Monday, September 21, 2015"
+date: "`r format(Sys.time(), '%F')`"
 output: pdf_document
+bibliography: school-access-bib.bib
 ---
 
 # Abstract
 
 Travel to school is an everyday reality for millions of young people around the world.
-The mode, duration, levels 
-
+The mode, duration, safety, comfort and pollution levels of this trip has huge
+impacts on the future generation, yet has received relatively little academic
+attention.
 Access to high quality quality schools is highly variable across geographical
-space so travel options are vital for ensuring a more equitable supply of
+space, making travel options are vital for ensuring a more equitable supply of
 educational opportunity to diverse groups. Conversely, poor accessibility
 to deprived area can reinforce social inequalities, with long-term implications.
-
-Based on these emerging findings, this paper sets out a school accessibility index.
+Based on this emerging context, this paper develops a school accessibility index
+for local areas.
 This index is based on current travel patterns, local travel infrastructure serving the school
 catchment and the provision of travel services such as public transport links.
-Using data from the Household Travel Survey (2007 and 2012), the School Census
-and electronic card data, we apply this metric to schools in Sao Paulo.
-
-
-
-Its impact on the social background of school attendees.
-A wider aim of this paper is to explore the potential links between accessibility
-and academic acheivement and opportunities. 
+Using data from the Sao Paulo Household Travel Survey (2007 and 2012), School Census
+and electronic card data, we demonstrate how this index can be used
+measure current provision and evaluate future interventions.
+The results suggest that that school accessibility can
+impact the social background of school attendees and
+academic performance.
+We conclude that extending the concept of local accessibility indicators
+to the 'school commute' can ensure that transport decision makers take
+equality and health impacts on young people into account.
 
 # Introduction
 
-Blah blah
+**Contents:**
+
+- Motivations
+- General measures of accessibility
+- School accessibility
+
+...
+
+The first well-known attempt to define accessibility quantitatively was by @ingram1971concept, which presented a range of measures related to distance (Euclidean and network), barriers and different functions representing distance decay.
+
+This early work made the distinction between accessibility indeces that apply to zones or single 'desire lines':
+"relative accessibility is defined as a measure of the effort of overcoming spatial separation between two points, while the integral accessibility is defined as a measure of the effort of overcoming spatial separation between a point and all other points within an area"
+[@allen1993accesibility]. 
 
 
 
+# Method: measuring school accessibility
+
+# Results
+
+# Discussion
+
+# Conclusion
+
+# References
