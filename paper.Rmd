@@ -1,10 +1,15 @@
 ---
-title: "School accessibility: a new index applied to enrollment and performance inequalities in Sao Paulo"
+title: 'School accessibility: a new index applied to enrollment and performance inequalities
+  in Sao Paulo'
 author: "Ana Moreno and Robin Lovelace"
-date: "`r format(Sys.time(), '%F')`"
 output: pdf_document
 bibliography: school-access-bib.bib
 ---
+
+```{r, echo=FALSE}
+#date: '`r format(Sys.time(), ''%F'')`'
+```
+
 
 # Abstract
 
@@ -49,6 +54,10 @@ This early work made the distinction between accessibility indeces that apply to
 
 
 # Method: measuring school accessibility
+
+$$
+\tau=2
+$$
 
 # Results
 
