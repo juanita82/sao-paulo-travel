@@ -2,7 +2,7 @@
 title: 'School accessibility: a new index applied to enrollment and performance inequalities
   in Sao Paulo'
 author: "Ana Moreno and Robin Lovelace"
-output: word_document
+output: pdf_document
 bibliography: school-access-bib.bib
 ---
 
@@ -45,6 +45,18 @@ equality and health impacts on young people into account.
 
 ...
 
+Travel to school is an everyday reality for millions of young people around the world.
+The mode, duration, safety, comfort and pollution levels of this trip has huge
+impacts on the future generation, yet has received relatively little academic
+attention.
+
+
+Travel options are vital for ensuring a more equitable supply of
+educational opportunity to diverse groups. Conversely, poor accessibility
+to deprived area can reinforce social inequalities, with long-term implications.
+Based on this emerging context, this paper develops a school accessibility index
+for local areas.
+
 The first well-known attempt to define accessibility quantitatively was by @ingram1971concept, which presented a range of measures related to distance (Euclidean and network), barriers and different functions representing distance decay.
 
 This early work made the distinction between accessibility indeces that apply to zones or single 'desire lines':
@@ -66,3 +78,5 @@ $$
 # Conclusion
 
 # References
+
+--> 
