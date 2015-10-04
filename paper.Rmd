@@ -2,7 +2,7 @@
 title: 'School accessibility: a new index applied to enrollment and performance inequalities
   in Sao Paulo'
 author: "Ana Moreno and Robin Lovelace"
-output: pdf_document
+output: word_document
 bibliography: school-access-bib.bib
 ---
 
