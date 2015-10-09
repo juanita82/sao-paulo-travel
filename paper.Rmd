@@ -1,8 +1,8 @@
 ---
-title: 'School accessibility: a new index applied to the case of São Paulo'
-author: Ana I. Moreno-Monroy (Universitat Rovira i Virgili), Frederico R. Ramos (Fundação
-  Getulio Vargas) and Robin Lovelace (University of Leeds)
-output: word_document
+title: 'School accessibility: a new index applied to enrollment and performance inequalities
+  in Sao Paulo'
+author: "Ana Moreno and Robin Lovelace"
+output: pdf_document
 bibliography: school-access-bib.bib
 ---
 
@@ -13,15 +13,29 @@ bibliography: school-access-bib.bib
 
 # Abstract
 
-A skewed distribution of schools towards wealthy areas can result in a mismatch between the provision of educational opportunity and the need for access to education.
-This mismatch can be further reinforced by poor transport provision in lower income areas.
-In this paper, we develop a school accessibility index that captures both the unequal distribution of schools and transport services across space.
-Our index combines information on the spatial distribution of children and adolescents by income categories, the location of existing schools, the travel patterns of students, and the travel infrastructure serving the school catchment area into a single measure of school accesibility. We use our index to measure school accessibility by areas across São Paulo, based on information from Population and School Censuses, Household Travel Surveys and electronic transit card records.
-The results illustrate how existing inequalities are amplified by variable accessibility to schools across income groups and geographical space. 
-We conclude that extending the concept of local accessibility indicators to the 'school commute' can guide the development of policies to reduce educational inequalities.
+Travel to school is an everyday reality for millions of young people around the world.
+The mode, duration, safety, comfort and pollution levels of this trip has huge
+impacts on the future generation, yet has received relatively little academic
+attention.
+Access to high quality quality schools is highly variable across geographical
+space, making travel options are vital for ensuring a more equitable supply of
+educational opportunity to diverse groups. Conversely, poor accessibility
+to deprived area can reinforce social inequalities, with long-term implications.
+Based on this emerging context, this paper develops a school accessibility index
+for local areas.
+This index is based on current travel patterns, local travel infrastructure serving the school
+catchment and the provision of travel services such as public transport links.
+Using data from the Sao Paulo Household Travel Survey (2007 and 2012), School Census
+and electronic card data, we demonstrate how this index can be used
+measure current provision and evaluate future interventions.
+The results suggest that that school accessibility can
+impact the social background of school attendees and
+academic performance.
+We conclude that extending the concept of local accessibility indicators
+to the 'school commute' can ensure that transport decision makers take
+equality and health impacts on young people into account.
 
-
-<!-- # Introduction
+# Introduction
 
 **Contents:**
 
@@ -45,7 +59,7 @@ for local areas.
 
 The first well-known attempt to define accessibility quantitatively was by @ingram1971concept, which presented a range of measures related to distance (Euclidean and network), barriers and different functions representing distance decay.
 
-This early work made the distinction between accessibility indexes that apply to zones or single 'desire lines':
+This early work made the distinction between accessibility indeces that apply to zones or single 'desire lines':
 "relative accessibility is defined as a measure of the effort of overcoming spatial separation between two points, while the integral accessibility is defined as a measure of the effort of overcoming spatial separation between a point and all other points within an area"
 [@allen1993accesibility]. 
 
