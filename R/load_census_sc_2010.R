@@ -18,7 +18,7 @@ sc_zone@data<-left_join(sc_zone@data, data, by = "CODSETOR")
 sc_zone@data[is.na(sc_zone@data)]<-0
 
 # Number of individuals aged 6-14 (fundamental school age range) in 2008 (equivalent to individuals 8-16 in 2010)
-sc_zone@data$fund_2008 <-sc_zone@data$P11_040 + sc_zone@data$P11_041 + sc_zone@data$P11_042 + sc_zone@data$P11_043 + sc_zone@data$P11_044 + sc_zone@data$P11_045 + sc_zone@data$P11_046 + sc_zone@data$P11_047 + sc_zone@data$P11_048 + sc_zone@data$P12_040 + sc_zone@data$P12_041 + sc_zone@data$P12_042 + sc_zone@data$P12_043 + sc_zone@data$P12_044 + sc_zone@data$P12_045 + sc_zone@data$P12_046 + sc_zone@data$P12_047 + sc_zone@data$P12_048 
+sc_zone@data$fund_2008 <- sc_zone@data$P11_042 + sc_zone@data$P11_043 + sc_zone@data$P11_044 + sc_zone@data$P11_045 + sc_zone@data$P11_046 + sc_zone@data$P11_047 + sc_zone@data$P11_048 + sc_zone@data$P12_040 + sc_zone@data$P12_041 + sc_zone@data$P12_042 + sc_zone@data$P12_043 + sc_zone@data$P12_044 + sc_zone@data$P12_045 + sc_zone@data$P12_046 + sc_zone@data$P12_047 + sc_zone@data$P12_048 + sc_zone@data$P11_049 + sc_zone@data$P11_050
 
 # Number of individuals aged 15-18 (fundamental school age range) in 2008 (equivalent to individuals 17-20 in 2010)
-sc_zone@data$media_2008 <-sc_zone@data$P11_048 + sc_zone@data$P11_049 + sc_zone@data$P11_050 + sc_zone@data$P11_051 + sc_zone@data$P11_052 + sc_zone@data$P11_053 + sc_zone@data$P11_054 +   sc_zone@data$P12_048 + sc_zone@data$P12_049 + sc_zone@data$P12_050 + sc_zone@data$P12_051 + sc_zone@data$P12_052 + sc_zone@data$P12_053 + sc_zone@data$P12_054 
+sc_zone@data$media_2008 <- sc_zone@data$P11_051 + sc_zone@data$P11_052 + sc_zone@data$P11_053 + sc_zone@data$P11_054 +   sc_zone@data$P12_048 + sc_zone@data$P12_049 + sc_zone@data$P12_050 + sc_zone@data$P12_051 + sc_zone@data$P12_052 + sc_zone@data$P12_053 + sc_zone@data$P12_054 

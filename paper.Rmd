@@ -50,7 +50,14 @@ constructively tackle embedded social inequalities.
 - Motivations
 - General measures of accessibility
 - School accessibility
+- Literature review
 
+References transport and social exclusion
+[@hernandez2015mobilities] and [@hernandez2015mobilities] provides a general framework to undertand transport-related social exclusion in emerging economies
+
+Evidence on access inequalities in the Brazilian context [@maia2016access]
+
+Active travel children and adolescents in the SPMR [@de2015changes]
 ...
 
 Travel to school is an everyday reality for millions of young people around the world.
@@ -69,13 +76,25 @@ The first well-known attempt to define accessibility quantitatively was by @ingr
 
 This early work made the distinction between accessibility indeces that apply to zones or single 'desire lines':
 "relative accessibility is defined as a measure of the effort of overcoming spatial separation between two points, while the integral accessibility is defined as a measure of the effort of overcoming spatial separation between a point and all other points within an area"
-[@allen1993accesibility]. 
+[@allen1993accesibility].
+
+# Area of study
+
+The The S\~{a}o Paulo Metropolitan Region (SPMR) is a large metropolis located in the South West of Brazil. It extends for over 7,700 squared kilometers and groups 39 different minucipalities. The estimated population in 2010 was close to 21 million. ... ADD MAP, etc.
+
+#Data
+
+For building our school accessibility index, we use data from three different sources. The first one is the 2008 School Census of the Brazilian National Institute of Educational Studies and Surveys (INEP), which provides information on the (universe) of public educational institutions, including their exact location (postal address) and the number of students enrolled in primary and secondary education. A clarification about the educational system in Brazil is in place here. Primary education \textit{ensino fundamental} comprises nine years, divided on a first year of basic literacy \textit{clase de alfabetiza\c{c}\~{a}}, followed by eight `` series''. Primary education is mandatory for children aged 6-14. Secondary education lasts three years. In principle, the age range of secondary education students is 15-18. For each school, have geo-localized each postal adress for a total of XX public primary and XX secondary schools in the SPRM. 
+
+Our second source is information the 2010 Population Census of Brazil at the \textit{clase de alfabetiza\c{c}\~{a}}, compiled and freely distributed by the Brazilian Institute of Statistics (IBGE). This spatial unit is equivalent to enumeration areas defined for surveying purposes, and contain on average 400 households. There is a total of 30,815 areas in the SPMR. IBGE also provides the digital networks containing the boundaries of the enumeration areas. From the census microdata, we have data on the number of inhabitants by age for each enumeration area. As the data was compiled in 2010 and we are interested in the number of children in primary school age (ages 6-14), and adolescents in secondary school age (ages 15-18), we calculate the count of children in the age range 8-16 (who were 6 and 14 in 2008) and adolescents in the age range 17-20 (aged 15-18 in 2008). The underlying assumption is that the location of children and adolescents did not change dramatically or systematically between 2008 and 2010, which is a reasonable assumption given thatr residential mobility is relatively low. using this procedure, we obtain a total number of children in primary school age of 2,731,999 (approximately 13 percent of the population) and a total of 1,730,252 tenneagers in secondary school age (approximately 8 percent of the population).       
+
+Out last source is the 2007 Origin-Destination Household Travel Survey (O-D Survey), carried out by the S\~{a}o Paulo Metropolitan Transport Authority M\^{e}tro. we have information at the travel flow-level. geographic coordinates are provided for the origin and destination of each trip, as well as additional information such as trip purpose (includng education), trip duration, number of transfers and mode. The O-D Survey also provides the exact location of schools. The survey also provides relevant information on individuals undertaking the trips, such as their age, income range and educational status (including student). We focus on trips made by primary and secondary schools with an indicated motive ``education'' at the destination. The total number of trips (excluding missing values) was 11,845. Of these, 5.5 percent were multimodal. In those cases, we assing the mode of the trip leg with the largest duration. We add all trip leg durations (in minutes) to obtain the total trip duration. 
 
 # Method: measuring school accessibility
 
 We calculate three different accessibility measures for different modes: cumulative, gravitiy-based, and competitive.
 
-The cumulative-opportunity measure for mode $M$ (Boisjoly and El-Geneidy, 2016) is defined as:
+The cumulative-opportunity measure for mode $M$ [@boisjoly2016] is defined as:
 
 $$ CO_{i}^M= \sum_{j=1}^n(S_{j}f(C_{ij}) $$
 
