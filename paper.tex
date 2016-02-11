@@ -41,9 +41,20 @@
             linkcolor=magenta,
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{0}
 
 %%% Use protect on footnotes to avoid problems with footnotes in titles
@@ -73,11 +84,18 @@ from for São Paulo}
   \predate{}\postdate{}
 
 
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
 
 \begin{document}
-
 \maketitle
-
 
 \section{Abstract}\label{abstract}
 
@@ -113,15 +131,25 @@ constructively tackle embedded social inequalities.
 \textbf{Contents:}
 
 \begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
+\tightlist
 \item
   Motivations
 \item
   General measures of accessibility
 \item
   School accessibility
+\item
+  Literature review
 \end{itemize}
 
+References transport and social exclusion (Hernandez and Titheridge
+2015) and (Hernandez and Titheridge 2015) provides a general framework
+to undertand transport-related social exclusion in emerging economies
+
+Evidence on access inequalities in the Brazilian context (Maia et al.
+2016)
+
+Active travel children and adolescents in the SPMR (Sá et al. 2015)
 \ldots{}
 
 Travel to school is an everyday reality for millions of young people
@@ -147,14 +175,76 @@ between two points, while the integral accessibility is defined as a
 measure of the effort of overcoming spatial separation between a point
 and all other points within an area'' (Allen, Liu, and Singer 1993).
 
+\section{Area of study}\label{area-of-study}
+
+The São Paulo Metropolitan Region (SPMR) is a large metropolis located
+in the South West of Brazil. It extends for over 7,700 squared
+kilometers and groups 39 different minucipalities. The estimated
+population in 2010 was close to 21 million. \ldots{} ADD MAP, etc.
+
+\section{Data}\label{data}
+
+For building our school accessibility index, we use data from three
+different sources. The first one is the 2008 School Census of the
+Brazilian National Institute of Educational Studies and Surveys (INEP),
+which provides information on the (universe) of public educational
+institutions, including their exact location (postal address) and the
+number of students enrolled in primary and secondary education. A
+clarification about the educational system in Brazil is in place here.
+Primary education \textit{ensino fundamental} comprises nine years,
+divided on a first year of basic literacy
+\textit{clase de alfabetiza\c{c}\~{a}}, followed by eight `` series''.
+Primary education is mandatory for children aged 6-14. Secondary
+education lasts three years. In principle, the age range of secondary
+education students is 15-18. For each school, have geo-localized each
+postal adress for a total of XX public primary and XX secondary schools
+in the SPRM.
+
+Our second source is information the 2010 Population Census of Brazil at
+the \textit{clase de alfabetiza\c{c}\~{a}}, compiled and freely
+distributed by the Brazilian Institute of Statistics (IBGE). This
+spatial unit is equivalent to enumeration areas defined for surveying
+purposes, and contain on average 400 households. There is a total of
+30,815 areas in the SPMR. IBGE also provides the digital networks
+containing the boundaries of the enumeration areas. From the census
+microdata, we have data on the number of inhabitants by age for each
+enumeration area. As the data was compiled in 2010 and we are interested
+in the number of children in primary school age (ages 6-14), and
+adolescents in secondary school age (ages 15-18), we calculate the count
+of children in the age range 8-16 (who were 6 and 14 in 2008) and
+adolescents in the age range 17-20 (aged 15-18 in 2008). The underlying
+assumption is that the location of children and adolescents did not
+change dramatically or systematically between 2008 and 2010, which is a
+reasonable assumption given thatr residential mobility is relatively
+low. using this procedure, we obtain a total number of children in
+primary school age of 2,731,999 (approximately 13 percent of the
+population) and a total of 1,730,252 tenneagers in secondary school age
+(approximately 8 percent of the population).
+
+Out last source is the 2007 Origin-Destination Household Travel Survey
+(O-D Survey), carried out by the São Paulo Metropolitan Transport
+Authority M\^{}\{e\}tro. we have information at the travel flow-level.
+geographic coordinates are provided for the origin and destination of
+each trip, as well as additional information such as trip purpose
+(includng education), trip duration, number of transfers and mode. The
+O-D Survey also provides the exact location of schools. The survey also
+provides relevant information on individuals undertaking the trips, such
+as their age, income range and educational status (including student).
+We focus on trips made by primary and secondary schools with an
+indicated motive ``education'' at the destination. The total number of
+trips (excluding missing values) was 11,845. Of these, 5.5 percent were
+multimodal. In those cases, we assing the mode of the trip leg with the
+largest duration. We add all trip leg durations (in minutes) to obtain
+the total trip duration.
+
 \section{Method: measuring school
 accessibility}\label{method-measuring-school-accessibility}
 
 We calculate three different accessibility measures for different modes:
 cumulative, gravitiy-based, and competitive.
 
-The cumulative-opportunity measure for mode \(M\) (Boisjoly and
-El-Geneidy, 2016) is defined as:
+The cumulative-opportunity measure for mode \(M\) (Boisjoly G. 2016) is
+defined as:
 
 \[ CO_{i}^M= \sum_{j=1}^n(S_{j}f(C_{ij}) \]
 
@@ -228,7 +318,7 @@ unico data?).
 \section{Results}\label{results}
 
 \begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
+\tightlist
 \item
   Descriptive statistics about modal choice and travel time by AEPs and
   level of income
@@ -243,12 +333,38 @@ unico data?).
 
 \section{References}\label{references}
 
+\hyperdef{}{ref-allen1993accesibility}{\label{ref-allen1993accesibility}}
 Allen, W Bruce, Dong Liu, and Scott Singer. 1993. ``Accesibility
 Measures of US Metropolitan Areas.'' \emph{Transportation Research Part
 B: Methodological} 27 (6). Elsevier: 439--49.
 
+\hyperdef{}{ref-boisjoly2016}{\label{ref-boisjoly2016}}
+Boisjoly G., El-Geneidy A. 2016. ``Is Complexity Better? Assessing
+Accessibility Measures That Account for Daily Fluctuations in Transit
+and Jobs Availability.'' 95th Annual Meeting of the Transportation
+Research Board, Washington D.C., USA.
+
+\hyperdef{}{ref-hernandez2015mobilities}{\label{ref-hernandez2015mobilities}}
+Hernandez, Daniel Oviedo, and Helena Titheridge. 2015. ``Mobilities of
+the Periphery: Informality, Access and Social Exclusion in the Urban
+Fringe in Colombia.'' \emph{Journal of Transport Geography}. Elsevier.
+
+\hyperdef{}{ref-ingram1971concept}{\label{ref-ingram1971concept}}
 Ingram, David R. 1971. ``The Concept of Accessibility: A Search for an
 Operational Form.'' \emph{Regional Studies} 5 (2). Taylor \& Francis:
 101--7.
+
+\hyperdef{}{ref-maia2016access}{\label{ref-maia2016access}}
+Maia, Maria Leonor, Karen Lucas, Geraldo Marinho, Enilson Santos, and
+Jessica Helena de Lima. 2016. ``Access to the Brazilian City---From the
+Perspectives of Low-Income Residents in Recife.'' \emph{Journal of
+Transport Geography}. Elsevier.
+
+\hyperdef{}{ref-de2015changes}{\label{ref-de2015changes}}
+Sá, Thiago Hérick de, Leandro Martin Totaro Garcia, Grégore Iven Mielke,
+Fabiana Maluf Rabacow, and Leandro Fórnias Machado de Rezende. 2015.
+``Changes in Travel to School Patterns Among Children and Adolescents in
+the São Paulo Metropolitan Area, Brazil, 1997--2007.'' \emph{Journal of
+Transport \& Health} 2 (2). Elsevier: 143--50.
 
 \end{document}
