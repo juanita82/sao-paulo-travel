@@ -1,0 +1,17 @@
+\begin{tabular}{l|l|r|r|r|r}
+\hline
+School\_type & Mode\_type & Percent & Distance & Time & Speed\\
+\hline
+Public & Public & 16.9 & 3.9 & 36.7 & 6.8\\
+\hline
+Public & Private & 4.6 & 2.7 & 15.8 & 11.0\\
+\hline
+Public & Active & 50.6 & 1.2 & 15.7 & 5.9\\
+\hline
+Private & Public & 8.8 & 3.9 & 35.7 & 6.8\\
+\hline
+Private & Private & 12.3 & 3.1 & 17.3 & 11.5\\
+\hline
+Private & Active & 6.5 & 0.9 & 13.9 & 4.7\\
+\hline
+\end{tabular}
