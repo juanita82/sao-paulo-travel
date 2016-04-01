@@ -24,8 +24,13 @@ st$mode = as.character(st$mode)
 st[9,1] = "Average"
 write.csv(st, "output-data/speed-table.csv")
 
+
 source("R/student-flows.R")
 od_flows = filter(od_flows, student == "Medio")
+aggregate(Speed ~ mode, mean, data = od_flows)
+aggregate(Speed ~ Mode_type, mean, data = od_flows)
+
+
 
 # Summarise speed, %, distance, time by public/private
 od_flows = filter(od_flows, !is.na(TIPO_ESC))
@@ -56,5 +61,7 @@ type_mode_table = group_by(filter(od_flows, Mode_type != "Other"), School_type, 
             Distance = mean(Distance/ 1000, na.rm = T),
             Time = mean(DURACAO),
             Speed = mean(Speed, na.rm = T))
+library(knitr)
+kable(type_mode_table[1:6,], format = "latex", digits = 1)
 
 write.csv(type_mode_table, "output-data/type_mode_table.csv")
