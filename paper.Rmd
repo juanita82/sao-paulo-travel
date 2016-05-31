@@ -141,10 +141,11 @@ Enrolment in public secondary schools is more dispersed spatially, as in princip
 
 Table 1 shows the model split by type of secondary school student. Clearly, secondary school students attending private schools disproportionally travel by car, compared to public school students (9% versus 47%), even though higher income areas are better served by public transport. This is in line with the findings of [@de2015]. Around 67% of public school students commute to school by active travel (mostly walking, since the percentage of biking is still relatively small), while 23% commute by public transport, which has much longer mean duration than other modes. 
 
-```{r table-placeholder, echo=FALSE}
-
+```{r table-placeholder, echo=FALSE, warning=FALSE}
+tbl = read.csv("output-data/res-table.csv")
+names(tbl) = c("Quantile", "Pre-reform", "Post-reform", "% change")
+knitr::kable(tbl, row.names = F, caption = "Mean accessibility before and after redistribution")
 ```
-
 
 Although the mean duration of travel to school remained stable over the period 1997-2007 ([@de2015]), they could increase as a result of several factors relevant to the SPMR, including sub-urbanization of particular demographic groups, such as those with higher income; increase in the size of schools leading to an increase in school's catchment area; less than proportional increase in schools in high population growth areas with poor connectivity; and institutional changes towards more flexible school choice [@easton2015]. 
 
