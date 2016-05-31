@@ -4,11 +4,11 @@ title: 'The unequal distribution of access to education and transport: insights 
 author: Ana I. Moreno-Monroy (Universitat Rovira i Virgili), Frederico R. Ramos (Fundação
   Getulio Vargas) and Robin Lovelace (University of Leeds)
 output:
-  word_document: default
   pdf_document:
     keep_tex: yes
   html_document:
     keep_md: yes
+  word_document: default
 bibliography: school-access-bib.bib
 ---
 
@@ -77,7 +77,7 @@ Previous literature for consolidated has found that school accessibility has a s
 The São Paulo Metropolitan Region (SPMR) is a large metropolis located in the South West of Brazil. It extends for over 7,700 squared kilometers and groups 38 different municipalities besides the municipality of São Paulo itself. The estimated population in 2010 was close to 19.5 million in 2010. The integrated transport system, to which users can access through an electronic card (Bilhete Único) is composed of a railway and bus network. The railway network comprises 78.4 kilometers in five subway lines and six suburban railway lines which provide less frequent and slower service than the subway. Some of the bus network operates on dedicated bus lines, which amounted to 500 km in 2015. As can be seen in Figure 1, the richer areas of the SPMR are better served by public transport, while n important number of lower income areas is under-served.      
      
 
-```{r inc-trans, echo=FALSE, out.width="80%"}
+```{r inc-trans, echo=FALSE, out.width="80%", fig.cap="Public transport system and income per capita in São Paulo, 2010."}
 knitr::include_graphics("income_pc.png")
 ```
 
@@ -91,7 +91,7 @@ According to the Censo Escolar 2010, there are 10,251 schools in the SPMR, out o
 
 The municipality is responsible for the organization of the pre-school and fundamental level. Poorer municipalities in SPMR have, in general, lower quality in terms of teachers and facilities. All the secondary schools are administrated by the state, nevertheless, differences exists depending of the location in the SPMR. In general, schools in peripheral locations show lower quality scores.  
 
-#Data
+# Data
 
 For building our school accessibility index, we use data from three different sources. The first one is the 2008 School Census of the Brazilian National Institute of Educational Studies and Surveys (INEP), which provides information on the (universe) of public educational institutions, including a unique identifier and the number of students enrolled in secondary education. We use the coordinates contained in the database provided by the CEM (Centro de Estudos da Metrópole) for 2001 to geolocate the schools in 2008 using the unique identifier (FRED TO EXPLAIN HOW WE GEO-LOCATED THE REST). A clarification about the educational system in Brazil is in place here. Primary education \textit{ensino fundamental} comprises nine years, divided on a first year of basic literacy \textit{clase de alfabetização}, followed by eight `` series''. Primary education is mandatory for children aged 6-14. Secondary education lasts three years. In principle, the age range of secondary education students is 15-18. For each school, have geo-localized each postal address for a total of XX public primary and XX secondary schools in the SPRM. 
 
@@ -120,12 +120,20 @@ result = readRDS("result.Rds")
 
 The code above takes an origin (`o`) and destination (`d`) and finds the travel time and distance. This is reported as 2962 metres and 2118 seconds (35 minutes) respectively. To ensure that the result was relevant to school travel, the times were calculated for arrival time at 9am on a weekday. The function was repeated for all origin-destination pairs.
 
-# Preliminary facts
+# Initial findings
 
 As can be seen by comparing Figures 1, 2 and 3, students disproportionally attend private secondary schools in higher income areas, while the opposite is true for public secondary schools.
 
-![Private secondary schools students home location](med_pr.png)
-![Public secondary schools students home location](med_pu.png)
+```{r, echo=FALSE, fig.cap="The home location of students attending public secondary schools students in São Paulo.", out.width="70%"}
+knitr::include_graphics(c("med_pu.png"))
+``` 
+
+```{r, echo=FALSE, fig.cap="The home location of students attending private secondary schools students in São Paulo.", out.width="70%"}
+knitr::include_graphics(c("med_pr.png"))
+``` 
+
+<!-- ![](med_pr.png) -->
+<!-- ![Public secondary schools students home location](med_pu.png) -->
 
 Enrolment in public secondary schools is more dispersed spatially, as in principle public schools are not clearly geographically concentrated within the region. There is, however, an important degree of variation in the school seats in each sub-area, ranging from zero to 7,754.  
 
