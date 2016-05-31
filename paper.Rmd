@@ -1,10 +1,12 @@
 ---
-title: 'The unequal distribution of access to education and transport:
-  insights from the São Paulo Metropolitan Region'
+title: 'The unequal distribution of access to education and transport: insights from
+  the São Paulo Metropolitan Region'
 author: Ana I. Moreno-Monroy (Universitat Rovira i Virgili), Frederico R. Ramos (Fundação
   Getulio Vargas) and Robin Lovelace (University of Leeds)
-output: 
-  pdf_document: 
+output:
+  html_document:
+    keep_md: yes
+  pdf_document:
     keep_tex: yes
 bibliography: school-access-bib.bib
 ---
@@ -12,6 +14,7 @@ bibliography: school-access-bib.bib
 ```{r, echo=FALSE}
 #date: '`r format(Sys.time(), ''%F'')`'
 ```
+
 
 
 # Abstract
@@ -40,12 +43,13 @@ constructively tackle embedded social inequalities.
 
 # Introduction
 
-Partly as a response to the pressures from the Free Pass Movement that started in March, 2013, low income public school students residing in the São Paulo Metropolitan Region had gained a public transport subsidy in 2015. However, in October 2015, the São Paulo state government announced during a television interview that as part of a budgetary deficit reduction plan, dozens of secondary schools would be closed in 2016. The change in policy was estimated to affect over 300,000 students who would be placed in schools far from their homes. As a response, in the following months students occupied over 200 schools. Protesters scored some victories: the school closings were postponed for one year, and the education secretary has resigned (The New York Times, 2015). 
+Partly as a response to the pressures from the Free Pass Movement that started in March, 2013, low income public school students residing in the São Paulo Metropolitan Region gained access to a public transport subsidy in 2015. However, in October 2015, the São Paulo state government announced during a television interview that as part of a budgetary deficit reduction plan, dozens of secondary schools would be closed in 2016. The change in policy was estimated to affect over 300,000 students, many whom would be placed in schools far from their homes. As a response, in the following months students occupied over 200 schools. Protesters scored some victories: the reform was postponed for one year, and the education secretary resigned (The New York Times, 2015). 
 
-Although this time the policy change was not carried out, in a context of high spatial inequalities in the provision of public transport and schooling, it is worth asking whether a public transport subsidy for students can compensate for the lower provision of public schools in some areas. In this paper, we propose a new school accessibility index that combines information of the place of residence of students, the spatial distribution of public schools, and public transport accessibility into a single measure. We calculate a school accessibility index for 633 areas within the SPMR and use it to simulate the impact of a policy change in the location of public secondary schools, in order to, first, understand the extent of spatial inequalities in school accessibility by public transport, and second, estimate the effect of a policy aiming at concentrating public secondary education provision on school accessibility. We find that closing down schools in areas with lower than average provision is highly regressive: it negatively impacts students with the lowest accessibility levels, accentuating existing inequalities. 
+Although this time the policy change was not carried out, in a context of high spatial inequalities in the provision of public transport and schooling, it is worth asking whether a public transport subsidy for students can compensate for the lower provision of public schools in some areas. In this paper, we propose a new school accessibility index that combines information of the place of residence of students, the spatial distribution of public schools, and public transport accessibility into a single measure. We calculate a school accessibility index for 633 areas within the SPMR and use it to simulate the impact of a policy change in the location of public secondary schools, in order to, first, understand the extent of spatial inequalities in school accessibility by public transport, and second, estimate the effect of a policy aiming at concentrating public secondary education provision on school accessibility. We find that closing down schools in areas with lower than average provision is highly regressive: it negatively impacts students with the lowest accessibility levels, accentuating existing inequalities. (INCLUDE SOMETHING ABOUT CONTESTATION)
 
-The proposed index is inspired by Shen's index, developed in the context of job accessibility. The main innovative element with respect to previous proposed measures of school accessibility is that it takes into account bith the 'supply' and 'demand' of students in each area. Concretly, it is based on the idea that in each local area, there is a certain amount of students in (secondary) school age, and a certain quantity of (public) school seats available. As areas are part of a city, each local area is also subject to the inflow of potential students from other areas, as well of the outflow of students to other areas. The magnitude of the net flow will depend on the travel distance between all other areas and the area in question, which here we consider to be the public transport commuting time between areas. The index thus captures the fact that students compete for school seats, which are limited in number, and distributed unewually across space. 
+The new index we propose here constitutes a methodological contribution to the measurement of  school accessibility. It is inspired by the index developed by Shen (1998) in the context of job accessibility. The main innovative element with respect to previous proposed measures of school accessibility is that it takes into account bith the 'supply' and 'demand' of students in each area. Concretly, it is based on the idea that in each local area, there is a certain amount of students in (secondary) school age, and a certain quantity of (public) school seats available. As areas are part of a city, each local area is also subject to the inflow of potential students from other areas, as well of the outflow of students to other areas. The magnitude of the net flow will depend on the travel distance between all other areas and the area in question, which here we consider to be the public transport commuting time between areas. The index thus captures the fact that students compete for school seats, which are limited in number, and distributed unewually across space. 
 
+HERE REVIEW PREVIOUS SCHOOL ACCESSIBILITY MEASURES AND EXPLAIN THEIR LIMITATIONS VIS-A-VIS OUR INDEX
 --Lit review
 
 The first well-known attempt to define accessibility quantitatively was by @ingram1971concept, which presented a range of measures related to distance (Euclidean and network), barriers and different functions representing distance decay. This early work made the distinction between accessibility indeces that apply to zones or single 'desire lines':
@@ -63,17 +67,14 @@ Active travel children and adolescents in the SPMR [@de2015]
 Previous literature for consolidated has found that school accessibility has a significant and positive impact on gradutation from upper secondary schools [@falch2013], and on post-compulsory education enrolment [@dickerson2012]. For emerging economies, [@asahi2014] finds that improved metro accessibility had a negative impact on student's performance as measured by test scores.  
 ...
 
-
 # Area of study
 
-The São Paulo Metropolitan Region (SPMR) is a large metropolis located in the South West of Brazil. It extends for over 7,700 squared kilometers and groups 38 different minucipalities besides the municipality of São Paulo itself. The estimated population in 2010 was close to 19.5 million in 2010. The integrated transport system, to which users can access through an electronic card (Bilhete Único) is composed of a railway and bus network. The railways network comprises 78.4 kilometers in five subway lines, which are complemented by six suburban railway lines. Some of the bus network operates on dedicated bus lines, which amounted to 500 km in 2015. As can be seen in Figure
-1, the richer areas of the SPMR are better served by public transport, while an important number of lower income areas is underserved.      
+The São Paulo Metropolitan Region (SPMR) is a large metropolis located in the South West of Brazil. It extends for over 7,700 squared kilometers and groups 38 different minucipalities besides the municipality of São Paulo itself. The estimated population in 2010 was close to 19.5 million in 2010. The integrated transport system, to which users can access through an electronic card (Bilhete Único) is composed of a railway and bus network. The railway network comprises 78.4 kilometers in five subway lines and six suburban railway lines which provide less frequent and slower service than the subway. Some of the bus network operates on dedicated bus lines, which amounted to 500 km in 2015. As can be seen in Figure 1, the richer areas of the SPMR are better served by public transport, while n important number of lower income areas is underserved.      
+     
 
-```{r inc-trans, echo=FALSE, label="inc-trans"}
+```{r inc-trans, echo=FALSE, out.width="80%"}
 knitr::include_graphics("income_pc.png")
 ```
-
-<!-- ![Public transport system and income per capita, 2010](income_pc.png) -->
 
 Regarding the educational system, since the constitution of 1946, primary education is compulsory. In 2005, the legislation changed to increase the duration of the primary education, going from 8 to 9 years. In 2010, all regions finished the transition. In 2009, a constitutional amendment imposed compulsory education for the primary “fundamental” and secondary “médio” levels. The constitution imposes that this resolution should be 100% implemented by 2016. 
 
@@ -102,16 +103,17 @@ d = c(-46.34078, -23.37746) # coordinates of origin
 result = dist_google(from = o, to = d, mode = "transit")
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, eval=FALSE}
 # saveRDS(result, "result.Rds")
 result = readRDS("result.Rds")
 ```
 
-```{r}
-result[3:4]
+```
+##   distances duration
+## 1      2962     2118
 ```
 
-The code above takes an origin (`o`) and destination (`d`) and finds the travel time and distance. This is reported as `r result[3]` metres and `r result[4]` seconds (`r round(result[4] / 60)` minutes) respectively. To ensure that the result was relevant to school travel, the times were calculated for arrival time at 9am on a weekday. The function was repeated for all origin-destinatio pairs.
+The code above takes an origin (`o`) and destination (`d`) and finds the travel time and distance. This is reported as 2962 metres and 2118 seconds (35 minutes) respectively. To ensure that the result was relevant to school travel, the times were calculated for arrival time at 9am on a weekday. The function was repeated for all origin-destinatio pairs.
 
 # Preliminary facts
 
@@ -161,13 +163,13 @@ Where the numerator discounts the number of "opportunities" (school seats) in ar
 
 # Results
 
-
 INLCUDE MAP COMPETITIVE ACCESIBILITY INDEX BY PUBLIC TRANSPORT, INTERPRETATION OF VALUES, SENSITIVITY ANALYSIS
 
 POLICY EXPERIMENT 
 To simulate the effects of the proposed educational reform on accessibility, assign
 students in areas with lower than average enrollment to the next area with higher
-than average enrollment
+than average enrollment  
+
 INCLUDE TABLE MEAN ACCESSIBILITY BEFORE AND AFTER REDISTRIBUTION, INTERPRETATION
 
 # Discussion
