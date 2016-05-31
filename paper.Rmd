@@ -4,10 +4,11 @@ title: 'The unequal distribution of access to education and transport: insights 
 author: Ana I. Moreno-Monroy (Universitat Rovira i Virgili), Frederico R. Ramos (Fundação
   Getulio Vargas) and Robin Lovelace (University of Leeds)
 output:
-  html_document:
-    keep_md: yes
+  word_document: default
   pdf_document:
     keep_tex: yes
+  html_document:
+    keep_md: yes
 bibliography: school-access-bib.bib
 ---
 
@@ -29,7 +30,7 @@ education and the social movements contesting increases in public
 transport fares. Another manifestation is to be found in the concept of
 school accessibility. This paper sheds light on the transport-education
 inequality nexus with reference to a new school accessibility measure
-applied São Paulo. By capturing both the unequal distribution of schools
+applied to São Paulo. By capturing both the unequal distribution of schools
 and transport services across space, the index allows embedded
 inequalities to be better understood and, with political will,
 contested. Our index combines information on the spatial distribution of
@@ -47,12 +48,12 @@ Partly as a response to the pressures from the Free Pass Movement that started i
 
 Although this time the policy change was not carried out, in a context of high spatial inequalities in the provision of public transport and schooling, it is worth asking whether a public transport subsidy for students can compensate for the lower provision of public schools in some areas. In this paper, we propose a new school accessibility index that combines information of the place of residence of students, the spatial distribution of public schools, and public transport accessibility into a single measure. We calculate a school accessibility index for 633 areas within the SPMR and use it to simulate the impact of a policy change in the location of public secondary schools, in order to, first, understand the extent of spatial inequalities in school accessibility by public transport, and second, estimate the effect of a policy aiming at concentrating public secondary education provision on school accessibility. We find that closing down schools in areas with lower than average provision is highly regressive: it negatively impacts students with the lowest accessibility levels, accentuating existing inequalities. (INCLUDE SOMETHING ABOUT CONTESTATION)
 
-The new index we propose here constitutes a methodological contribution to the measurement of  school accessibility. It is inspired by the index developed by Shen (1998) in the context of job accessibility. The main innovative element with respect to previous proposed measures of school accessibility is that it takes into account bith the 'supply' and 'demand' of students in each area. Concretly, it is based on the idea that in each local area, there is a certain amount of students in (secondary) school age, and a certain quantity of (public) school seats available. As areas are part of a city, each local area is also subject to the inflow of potential students from other areas, as well of the outflow of students to other areas. The magnitude of the net flow will depend on the travel distance between all other areas and the area in question, which here we consider to be the public transport commuting time between areas. The index thus captures the fact that students compete for school seats, which are limited in number, and distributed unewually across space. 
+The new index we propose here constitutes a methodological contribution to the measurement of  school accessibility. It is inspired by the index developed by Shen (1998) in the context of job accessibility. The main innovative element with respect to previous proposed measures of school accessibility is that it takes into account both the 'supply' and 'demand' of students in each area. Concretely, it is based on the idea that in each local area, there is a certain amount of students in (secondary) school age, and a certain quantity of (public) school seats available. As areas are part of a city, each local area is also subject to the inflow of potential students from other areas, as well of the outflow of students to other areas. The magnitude of the net flow will depend on the travel distance between all other areas and the area in question, which here we consider to be the public transport commuting time between areas. The index thus captures the fact that students compete for school seats, which are limited in number, and distributed unequally across space. 
 
 HERE REVIEW PREVIOUS SCHOOL ACCESSIBILITY MEASURES AND EXPLAIN THEIR LIMITATIONS VIS-A-VIS OUR INDEX
 --Lit review
 
-The first well-known attempt to define accessibility quantitatively was by @ingram1971concept, which presented a range of measures related to distance (Euclidean and network), barriers and different functions representing distance decay. This early work made the distinction between accessibility indeces that apply to zones or single 'desire lines':
+The first well-known attempt to define accessibility quantitatively was by @ingram1971concept, which presented a range of measures related to distance (Euclidean and network), barriers and different functions representing distance decay. This early work made the distinction between accessibility indices that apply to zones or single 'desire lines':
 "relative accessibility is defined as a measure of the effort of overcoming spatial separation between two points, while the integral accessibility is defined as a measure of the effort of overcoming spatial separation between a point and all other points within an area" [@allen1993accesibility].
 
 Inequalities in educational and transport infrastructure are mutually reinforcing: the right to mobility is intrinsically linked to the right to education. This is manifested by the overlap between recent protests against unwanted changes to public education and the social movements contesting increases in public transport fares. Travel to school options are vital for ensuring a more equitable supply of educational opportunity to diverse groups. Conversely, poor accessibility to deprived area can reinforce social inequalities, with long-term implications. Based on this emerging context, this paper develops a school accessibility index for local areas.
@@ -64,12 +65,12 @@ Evidence on access inequalities in the Brazilian context [@gomide2006]
 
 Active travel children and adolescents in the SPMR [@de2015]
 
-Previous literature for consolidated has found that school accessibility has a significant and positive impact on gradutation from upper secondary schools [@falch2013], and on post-compulsory education enrolment [@dickerson2012]. For emerging economies, [@asahi2014] finds that improved metro accessibility had a negative impact on student's performance as measured by test scores.  
+Previous literature for consolidated has found that school accessibility has a significant and positive impact on graduation from upper secondary schools [@falch2013], and on post-compulsory education enrolment [@dickerson2012]. For emerging economies, [@asahi2014] finds that improved metro accessibility had a negative impact on student's performance as measured by test scores.  
 ...
 
 # Area of study
 
-The São Paulo Metropolitan Region (SPMR) is a large metropolis located in the South West of Brazil. It extends for over 7,700 squared kilometers and groups 38 different minucipalities besides the municipality of São Paulo itself. The estimated population in 2010 was close to 19.5 million in 2010. The integrated transport system, to which users can access through an electronic card (Bilhete Único) is composed of a railway and bus network. The railway network comprises 78.4 kilometers in five subway lines and six suburban railway lines which provide less frequent and slower service than the subway. Some of the bus network operates on dedicated bus lines, which amounted to 500 km in 2015. As can be seen in Figure 1, the richer areas of the SPMR are better served by public transport, while n important number of lower income areas is underserved.      
+The São Paulo Metropolitan Region (SPMR) is a large metropolis located in the South West of Brazil. It extends for over 7,700 squared kilometers and groups 38 different municipalities besides the municipality of São Paulo itself. The estimated population in 2010 was close to 19.5 million in 2010. The integrated transport system, to which users can access through an electronic card (Bilhete Único) is composed of a railway and bus network. The railway network comprises 78.4 kilometers in five subway lines and six suburban railway lines which provide less frequent and slower service than the subway. Some of the bus network operates on dedicated bus lines, which amounted to 500 km in 2015. As can be seen in Figure 1, the richer areas of the SPMR are better served by public transport, while n important number of lower income areas is under-served.      
      
 
 ```{r inc-trans, echo=FALSE, out.width="80%"}
@@ -80,7 +81,7 @@ Regarding the educational system, since the constitution of 1946, primary educat
 
 By law, the state/municipalities should guaranty the adequate provision (100% coverage of the demand). There are national and state educational funds that are distributed among the schools  according to the number of enrolled students and  existence of facilities (library , laboratories). 
 
-The strucuture of the educational system is composed by both public and private schools. The public schools are divided in the folllowing levels: Pre school – 4-5 years (municipal administration); Fundamental – 6 – 14 (municipal administration); Secondary “medio” – 15-17 (state administration) and Superior (state and federal administration).  
+The structure of the educational system is composed by both public and private schools. The public schools are divided in the following levels: Pre school – 4-5 years (municipal administration); Fundamental – 6 – 14 (municipal administration); Secondary “medio” – 15-17 (state administration) and Superior (state and federal administration).  
 
 According to the Censo Escolar 2010, there are 10,251 schools in the SPMR, out of which      54% are public (22% state / 32% municipal) and 46% are private. Geographically, the student is assigned to the closer school or to their house or their parent’s working place. In the secondary, the student can ask for a vacancy in a different school with a justification and under the condition of the availability of vacancy. 
 
@@ -88,11 +89,11 @@ The municipality is responsible for the organization of the pre-school and funda
 
 #Data
 
-For building our school accessibility index, we use data from three different sources. The first one is the 2008 School Census of the Brazilian National Institute of Educational Studies and Surveys (INEP), which provides information on the (universe) of public educational institutions, including a unique identifier and the number of students enrolled in secondary education. We use the coordinates contained in the database provided by the CEM (Centro de Estudos da Metrópole) for 2001 to geolocate the schools in 2008 using the unique identifier (FRED TO EXPLAIN HOW WE GEO-LOCATED THE REST). A clarification about the educational system in Brazil is in place here. Primary education \textit{ensino fundamental} comprises nine years, divided on a first year of basic literacy \textit{clase de alfabetização}, followed by eight `` series''. Primary education is mandatory for children aged 6-14. Secondary education lasts three years. In principle, the age range of secondary education students is 15-18. For each school, have geo-localized each postal adress for a total of XX public primary and XX secondary schools in the SPRM. 
+For building our school accessibility index, we use data from three different sources. The first one is the 2008 School Census of the Brazilian National Institute of Educational Studies and Surveys (INEP), which provides information on the (universe) of public educational institutions, including a unique identifier and the number of students enrolled in secondary education. We use the coordinates contained in the database provided by the CEM (Centro de Estudos da Metrópole) for 2001 to geolocate the schools in 2008 using the unique identifier (FRED TO EXPLAIN HOW WE GEO-LOCATED THE REST). A clarification about the educational system in Brazil is in place here. Primary education \textit{ensino fundamental} comprises nine years, divided on a first year of basic literacy \textit{clase de alfabetização}, followed by eight `` series''. Primary education is mandatory for children aged 6-14. Secondary education lasts three years. In principle, the age range of secondary education students is 15-18. For each school, have geo-localized each postal address for a total of XX public primary and XX secondary schools in the SPRM. 
 
 Our second source is information the 2010 Population Census of Brazil at the \textit{setor censitario} level, compiled and freely distributed by the Brazilian Institute of Statistics (IBGE). This spatial unit is equivalent to enumeration areas defined for surveying purposes, and contain on average 400 households. There is a total of 30,815 areas in the SPMR. IBGE also provides the digital networks containing the boundaries of the enumeration areas. From the census microdata, we have data on the number of inhabitants by age for each enumeration area. The number of adolescents in secondary school age (ages 15-18) is 1'216.611 (approximately 13 percent of the population). 
 
-Our last source is the 2007 Origin-Destination Household Travel Survey (O-D Survey), carried out by the São Paulo Metropolitan Transport Authority Mêtro. We have information at the travel flow-level. geographic coordinates are provided for the origin and destination of each trip, as well as additional information such as trip purpose (includng education), trip duration, number of transfers and mode. The O-D Survey also provides the exact location of schools. The survey also provides relevant information on individuals undertaking the trips, such as their age, income range and educational status (including student). We focus on trips made by secondary school students with an indicated motive ``education'' at the destination. The total number of trips (excluding missing values) was 11,845. Of these, 5.5 percent were multimodal. In those cases, we assing the mode of the trip leg with the largest duration. We add all trip leg durations (in minutes) to obtain the total trip duration. 
+Our last source is the 2007 Origin-Destination Household Travel Survey (O-D Survey), carried out by the São Paulo Metropolitan Transport Authority Mêtro. We have information at the travel flow-level. geographic coordinates are provided for the origin and destination of each trip, as well as additional information such as trip purpose (including education), trip duration, number of transfers and mode. The O-D Survey also provides the exact location of schools. The survey also provides relevant information on individuals undertaking the trips, such as their age, income range and educational status (including student). We focus on trips made by secondary school students with an indicated motive ``education'' at the destination. The total number of trips (excluding missing values) was 11,845. Of these, 5.5 percent were multimodal. In those cases, we assign the mode of the trip leg with the largest duration. We add all trip leg durations (in minutes) to obtain the total trip duration. 
 
 The Google Distance Matrix API was used to find the travel times and distances by public transport. This was implemented using an interface to the API, using the R package **stplanr** [@stplanr]. To provide an example of how the method works, a reproducible example is illustrated below.
 
@@ -100,7 +101,7 @@ The Google Distance Matrix API was used to find the travel times and distances b
 library(stplanr)
 o = c(-46.31813, -23.38584) # coordinates of origin
 d = c(-46.34078, -23.37746) # coordinates of origin
-result = dist_google(from = o, to = d, mode = "transit")
+dist_google(from = o, to = d, mode = "transit")
 ```
 
 ```{r, echo=FALSE, eval=FALSE}
@@ -113,7 +114,7 @@ result = readRDS("result.Rds")
 ## 1      2962     2118
 ```
 
-The code above takes an origin (`o`) and destination (`d`) and finds the travel time and distance. This is reported as 2962 metres and 2118 seconds (35 minutes) respectively. To ensure that the result was relevant to school travel, the times were calculated for arrival time at 9am on a weekday. The function was repeated for all origin-destinatio pairs.
+The code above takes an origin (`o`) and destination (`d`) and finds the travel time and distance. This is reported as 2962 metres and 2118 seconds (35 minutes) respectively. To ensure that the result was relevant to school travel, the times were calculated for arrival time at 9am on a weekday. The function was repeated for all origin-destination pairs.
 
 # Preliminary facts
 
@@ -122,7 +123,7 @@ As can be seen by comparing Figures 1, 2 and 3, students disproportionally atten
 ![Private secondary schools students home location](med_pr.png)
 ![Public secondary schools students home location](med_pu.png)
 
-Enrollment in public secondary schools is more dispersed spatially, as in principle public shcools are not clearly geographically concentrated within the region. There is, however, an important degree of variation in the school seats in each sub-area, ranging from zero to 7,754.  
+Enrolment in public secondary schools is more dispersed spatially, as in principle public schools are not clearly geographically concentrated within the region. There is, however, an important degree of variation in the school seats in each sub-area, ranging from zero to 7,754.  
 
 ![Enrollment in public secondary schools](enrol.png)
 
@@ -155,7 +156,7 @@ $$
 
 This measure counts the number of schools available from one area within a certain travel time threshold by mode $M$. $C_{ij}$ is the travel cost (measured in time) between the centroid of zone $i$ and the centroid of zone $j$, and $f(C_{ij})$ is a weight function. 
 
-This measure takes into account the sptail distribution of schooling opportunities, but not the local demand for schooling. This is particularly relevant for our analysis, since it could be the case that some areas are disproportionally served with respect to the number of potentail students living within a certain travel distance. In order to assess the mismatch between the demand and supply for schooling, we use the sum of students in schools in each area (supply), and the sum of individuals within the school grade age-group living in each area (demand) in the following competitive accessibility measure, first proposed by [@shen1998location]:
+This measure takes into account the spatial distribution of schooling opportunities, but not the local demand for schooling. This is particularly relevant for our analysis, since it could be the case that some areas are disproportionally served with respect to the number of potential students living within a certain travel distance. In order to assess the mismatch between the demand and supply for schooling, we use the sum of students in schools in each area (supply), and the sum of individuals within the school grade age-group living in each area (demand) in the following competitive accessibility measure, first proposed by [@shen1998location]:
 
 $$ CA_{i}^M= \sum_{j=1}^n\frac{O_{j}f(C_{ij})}{\sum_{k=1}^n(t_{k}f(C_{kj}))}$$
 
@@ -167,8 +168,8 @@ INLCUDE MAP COMPETITIVE ACCESIBILITY INDEX BY PUBLIC TRANSPORT, INTERPRETATION O
 
 POLICY EXPERIMENT 
 To simulate the effects of the proposed educational reform on accessibility, assign
-students in areas with lower than average enrollment to the next area with higher
-than average enrollment  
+students in areas with lower than average enrolment to the next area with higher
+than average enrolment  
 
 INCLUDE TABLE MEAN ACCESSIBILITY BEFORE AND AFTER REDISTRIBUTION, INTERPRETATION
 
