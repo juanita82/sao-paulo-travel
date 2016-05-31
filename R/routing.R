@@ -47,22 +47,53 @@ class(l$from_addresses) = "character"
 class(l$to_addresses) = "character"
 class(l$distances) = "numeric"
 class(l$duration) = "numeric"
+l$fare = NA
 
 # for(i in 1:nrow(l)){
-for(i in 1:100){
+for(i in 12001:nrow(l)){
   flag <- TRUE
   tryCatch({
     dists = dist_google(line2points(l[i,])[1,], line2points(l[i,])[2,],
-                        mode = "transit", arrival_time = brtime)
+                        mode = "transit", arrival_time = brtime,
+                        google_api = Sys.getenv("GOOGLEDIST"))
     l$from_addresses[i] = as.character(dists$from_addresses)
     l$to_addresses[i] = as.character(dists$to_addresses)
     l$distances[i] = dists$distances
     l$duration[i] = dists$duration
+    l$fare[i] = dists$fare
   },
     error=function(e) flag<<-FALSE
   )
   if (!flag) next
-
 }
+
 ldff = l@data
+l$dist_hav_km = l$dist_hav / 1000
+
+# plotting
+l$dist_band = cut(l$dist_hav_km, breaks = quantile(l$dist_hav_km))
+l$color = cut(l$dist_hav_km, breaks = quantile(l$dist_hav_km),
+              labels = c("green", "blue", "yellow", "red"))
+l$color = as.character(l$color)
+plot(ldff$dist_hav / 1000, ldff$distances / 1000,
+    ylab = "Public transport distance (km)",
+    xlab = "Euclidean distance (km)", col = l$color)
+
+
+
+library(tmap)
+tmap_mode("view")
+osm_tiles = tmap::read_osm(l)
+tm_shape(osm_tiles) +
+  tm_raster() +
+  tm_shape(l) +
+  tm_lines(col = "dist_band")
+
+
+
+
+
+
+qtm(l, line.col = "dist_hav_km")
+
 write.csv(ldff, "output-data/sample-time-od-out.csv")
