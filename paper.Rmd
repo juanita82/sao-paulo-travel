@@ -33,6 +33,7 @@ adolescents, the location of existing schools, and the travel infrastructure ser
 are amplified by variable accessibility to schools across income groups
 and geographical space. 
 
+
 # Introduction
 
 Inequalities in educational and transport infrastructure are mutually reinforcing: the right to mobility is intrinsically linked to the right to education. This is manifested by the overlap between recent protests against unwanted changes to public education and the social movements contesting increases in public transport fares. Travel to school options are vital for ensuring a more equitable supply of educational opportunity to diverse groups. Conversely, poor accessibility to deprived area can reinforce social inequalities, with long-term implications. Based on this emerging context, this paper develops a school accessibility index for local areas.
