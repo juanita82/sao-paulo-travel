@@ -17,66 +17,43 @@ bibliography: school-access-bib.bib
 ```
 
 
-
 # Abstract
 
-In many large Latin American cities such as São Paulo, growing social
+In many large Latin American urban areas such as the São Paulo Metropolitan Region (SPMR), growing social
 and economic inequalities are embedded through unfair education and
 transport systems. Inequalities in educational and transport
 infrastructure are mutually reinforcing: the right to mobility is
 intrinsically linked to the right to education. This is manifested by
 the overlap between recent protests against unwanted changes to public
 education and the social movements contesting increases in public
-transport fares. Another manifestation is to be found in the concept of
-school accessibility. This paper sheds light on the transport-education
+transport fares. This paper sheds light on the transport-education
 inequality nexus with reference to a new school accessibility measure
-applied to São Paulo. By capturing both the unequal distribution of schools
-and transport services across space, the index allows embedded
-inequalities to be better understood and, with political will,
-contested. Our index combines information on the spatial distribution of
-adolescents, the location of existing schools, the travel patterns of students, and the travel infrastructure serving the school catchment area into a single measure. The index is used to measure school accessibility locally across São Paulo, using
-data sources from Population and School Censuses, commonly available in
-Latin American cities. The results illustrate how existing inequalities
+applied to the SPMR. Our index combines information on the spatial distribution of
+adolescents, the location of existing schools, and the travel infrastructure serving the school catchment area into a single measure. The index is used to measure school accessibility locally across 633 areas within the SPMR. The results illustrate how existing inequalities
 are amplified by variable accessibility to schools across income groups
-and geographical space. We conclude that extending the concept of local
-accessibility indicators to education can help to both contest and
-constructively tackle embedded social inequalities.
+and geographical space. 
 
 # Introduction
 
-Partly as a response to the pressures from the Free Pass Movement that started in March, 2013, low income public school students residing in the São Paulo Metropolitan Region gained access to a public transport subsidy in 2015. However, in October 2015, the São Paulo state government announced during a television interview that as part of a budgetary deficit reduction plan, dozens of secondary schools would be closed in 2016. The change in policy was estimated to affect over 300,000 students, many whom would be placed in schools far from their homes. As a response, in the following months students occupied over 200 schools. Protesters scored some victories: the reform was postponed for one year, and the education secretary resigned (The New York Times, 2015). 
+Inequalities in educational and transport infrastructure are mutually reinforcing: the right to mobility is intrinsically linked to the right to education. This is manifested by the overlap between recent protests against unwanted changes to public education and the social movements contesting increases in public transport fares. Travel to school options are vital for ensuring a more equitable supply of educational opportunity to diverse groups. Conversely, poor accessibility to deprived area can reinforce social inequalities, with long-term implications. Based on this emerging context, this paper develops a school accessibility index for local areas.
+
+The São Paulo Metropolitan Region (SPMR) presents an excellent opportunity to measure the extent of educational and transport infrastructure, and to study the impact of public policies on different socio-economic groups. Partly as a response to the pressures from the Free Pass Movement that started in March, 2013, low income public school students residing in the SPMR gained access to a public transport subsidy in 2015. However, in October 2015, the São Paulo state government announced during a television interview that as part of a budgetary deficit reduction plan, dozens of secondary schools would be closed in 2016. The change in policy was estimated to affect over 300,000 students, many whom would be placed in schools far from their homes. As a response, in the following months students occupied over 200 schools. Protesters scored some victories: the reform was postponed for one year, and the education secretary resigned (The New York Times, 2015). 
 
 Although this time the policy change was not carried out, in a context of high spatial inequalities in the provision of public transport and schooling, it is worth asking whether a public transport subsidy for students can compensate for the lower provision of public schools in some areas. In this dynamic and highly political context, new quantitative evidence can help shed light on the the relationship between transport and educational inequalities and the extent to which they are mutually reinforcing. Moreover, the results should help design policies that are more inclusive and equitable by highlighting areas where the provision of schools, travel to school opportunities, or both, are particularly restrictive.
 
 Motivated by this political context this paper presents a new school accessibility index. It combines information about the place of residence of students, the spatial distribution of public schools, and public transport accessibility into a single measure. We calculate a school accessibility index for 633 areas within the SPMR and use it to simulate the impact of a policy change in the location of public secondary schools, in order to, first, understand the extent of spatial inequalities in school accessibility by public transport, and second, estimate the effect of a policy aiming at concentrating public secondary education provision on school accessibility. We find that closing down schools in areas with lower than average provision is highly regressive: it negatively impacts students with the lowest accessibility levels, accentuating existing inequalities.
 
-<!-- (INCLUDE SOMETHING ABOUT CONTESTATION) -->
+The first well-known attempt to define accessibility quantitatively was by [@ingram1971concept], which presented a range of measures related to distance (Euclidean and network), barriers and different functions representing distance decay. This early work made the distinction between accessibility indices that apply to zones or single 'desire lines':
+"relative accessibility is defined as a measure of the effort of overcoming spatial separation between two points, while the integral accessibility is defined as a measure of the effort of overcoming spatial separation between a point and all other points within an area" [@allen1993accesibility]. The measurement of access to jobs by particular transport modes has received vast attention in the literature [@geurs2004], while studies on access to education has largely focused on the consequences of mode choice on socio-economic indicators and school outcomes (see for instance [@asahi2014], , [@falch2013] and [@dickerson2012] on the impact of accessibility on school outcomes, and [@andersson2012] and [@easton2015] on the effect of changes in travel-to-school patterns in developed economies). 
 
-The new index contributes to the measurement of school accessibility. It is inspired by the index developed by Shen (1998) in the context of job accessibility. The main innovative element with respect to previous proposed measures of school accessibility is that it takes into account both the 'supply' and 'demand' of students in each area. Concretely, it is based on the idea that in each local area, there is a certain amount of students in (secondary) school age, and a certain quantity of (public) school seats available. As areas are part of a city, each local area is also subject to the inflow of potential students from other areas, as well of the outflow of students to other areas. The magnitude of the net flow will depend on the travel distance between all other areas and the area in question, which here we consider to be the public transport commuting time between areas. The index thus captures the fact that students compete for school seats, which are limited in number, and distributed unequally across space. 
+The new index contributes to the measurement of school accessibility. It is inspired by the index developed by [@shen1998location] in the context of job accessibility. The main innovative element with respect to previous proposed measures of school accessibility is that it takes into account both the 'supply' and 'demand' of students in each area. Concretely, it is based on the idea that in each local area, there is a certain amount of students in (secondary) school age, and a certain quantity of (public) school seats available. As areas are part of a city, each local area is also subject to the inflow of potential students from other areas, as well of the outflow of students to other areas. The magnitude of the net flow will depend on the travel distance between all other areas and the area in question, which here we consider to be the public transport commuting time between areas. The index thus captures the fact that students compete for school seats, which are limited in number, and distributed unequally across space. The inclusion of this competitive element to school accessibility, akin to that in job access, highlights the fact that under certain educational systems, the access to opportunities is mediated by competition.  
 
-HERE REVIEW PREVIOUS SCHOOL ACCESSIBILITY MEASURES AND EXPLAIN THEIR LIMITATIONS VIS-A-VIS OUR INDEX
---Lit review
-
-The first well-known attempt to define accessibility quantitatively was by @ingram1971concept, which presented a range of measures related to distance (Euclidean and network), barriers and different functions representing distance decay. This early work made the distinction between accessibility indices that apply to zones or single 'desire lines':
-"relative accessibility is defined as a measure of the effort of overcoming spatial separation between two points, while the integral accessibility is defined as a measure of the effort of overcoming spatial separation between a point and all other points within an area" [@allen1993accesibility].
-
-Inequalities in educational and transport infrastructure are mutually reinforcing: the right to mobility is intrinsically linked to the right to education. This is manifested by the overlap between recent protests against unwanted changes to public education and the social movements contesting increases in public transport fares. Travel to school options are vital for ensuring a more equitable supply of educational opportunity to diverse groups. Conversely, poor accessibility to deprived area can reinforce social inequalities, with long-term implications. Based on this emerging context, this paper develops a school accessibility index for local areas.
-
-References transport and social exclusion
-[@jones2012] provides a general framework to understand transport-related social exclusion in emerging economies
-
-Evidence on access inequalities in the Brazilian context [@gomide2006]
-
-Active travel children and adolescents in the SPMR [@de2015]
-
-Previous literature for consolidated has found that school accessibility has a significant and positive impact on graduation from upper secondary schools [@falch2013], and on post-compulsory education enrolment [@dickerson2012]. For emerging economies, [@asahi2014] finds that improved metro accessibility had a negative impact on student's performance as measured by test scores.  
-...
+Our work contributes to the literature on transport-related social exclusion in emerging economies [@jones2012] by providing a quantitative way to assess multiple dimensions into a single measure. It provides a benchmark to compare access inequalities in countries with unequal provision of public services [@gomide2006], [@pacione1989access]. In the context of contested mobilities, by capturing both the unequal distribution of schools and transport services across space, the index allows embedded inequalities to be better understood and, with political will, contested. 
 
 # Area of study
 
 The São Paulo Metropolitan Region (SPMR) is a large metropolis located in the South West of Brazil. It extends for over 7,700 squared kilometers and groups 38 different municipalities besides the municipality of São Paulo itself. The estimated population in 2010 was close to 19.5 million in 2010. The integrated transport system, to which users can access through an electronic card (Bilhete Único) is composed of a railway and bus network. The railway network comprises 78.4 kilometers in five subway lines and six suburban railway lines which provide less frequent and slower service than the subway. Some of the bus network operates on dedicated bus lines, which amounted to 500 km in 2015. As can be seen in Figure 1, the richer areas of the SPMR are better served by public transport, while n important number of lower income areas is under-served.      
      
-
 ```{r inc-trans, echo=FALSE, out.width="80%", fig.cap="Public transport system and income per capita in São Paulo, 2010."}
 knitr::include_graphics("income_pc.png")
 ```
@@ -87,7 +64,7 @@ By law, the state/municipalities should guaranty the adequate provision (100% co
 
 The structure of the educational system is composed by both public and private schools. The public schools are divided in the following levels: Pre school – 4-5 years (municipal administration); Fundamental – 6 – 14 (municipal administration); Secondary “medio” – 15-17 (state administration) and Superior (state and federal administration).  
 
-According to the Censo Escolar 2010, there are 10,251 schools in the SPMR, out of which      54% are public (22% state / 32% municipal) and 46% are private. Geographically, the student is assigned to the closer school or to their house or their parent’s working place. In the secondary, the student can ask for a vacancy in a different school with a justification and under the condition of the availability of vacancy. 
+According to the Censo Escolar 2010, there are 10,251 schools in the SPMR, out of which  54% are public (22% state / 32% municipal) and 46% are private. Geographically, the student is assigned to the closer school or to their house or their parent’s working place. In the secondary, the student can ask for a vacancy in a different school with a justification and under the condition of the availability of vacancy. 
 
 The municipality is responsible for the organization of the pre-school and fundamental level. Poorer municipalities in SPMR have, in general, lower quality in terms of teachers and facilities. All the secondary schools are administrated by the state, nevertheless, differences exists depending of the location in the SPMR. In general, schools in peripheral locations show lower quality scores.  
 
@@ -124,25 +101,24 @@ The code above takes an origin (`o`) and destination (`d`) and finds the travel 
 
 As can be seen by comparing Figures 1, 2 and 3, students disproportionally attend private secondary schools in higher income areas, while the opposite is true for public secondary schools.
 
-```{r, echo=FALSE, fig.cap="The home location of students attending public secondary schools students in São Paulo.", out.width="70%"}
+```{r, echo=FALSE, fig.cap="The home location of students attending public secondary schools students in the SPMR.", out.width="70%"}
 knitr::include_graphics(c("med_pu.png"))
 ``` 
 
-```{r, echo=FALSE, fig.cap="The home location of students attending private secondary schools students in São Paulo.", out.width="70%"}
+```{r, echo=FALSE, fig.cap="The home location of students attending private secondary schools students in the SPMR.", out.width="70%"}
 knitr::include_graphics(c("med_pr.png"))
 ``` 
 
-<!-- ![](med_pr.png) -->
-<!-- ![Public secondary schools students home location](med_pu.png) -->
-
 Enrolment in public secondary schools is more dispersed spatially, as in principle public schools are not clearly geographically concentrated within the region. There is, however, an important degree of variation in the school seats in each sub-area, ranging from zero to 7,754.  
 
-![Enrollment in public secondary schools](enrol.png)
+```{r, echo=FALSE, fig.cap="Enrollment in public secondary schools in the SPMR.", out.width="70%"}
+knitr::include_graphics(c("enrol.png"))
+``` 
 
 Table 1 shows the model split by type of secondary school student. Clearly, secondary school students attending private schools disproportionally travel by car, compared to public school students (9% versus 47%), even though higher income areas are better served by public transport. This is in line with the findings of [@de2015]. Around 67% of public school students commute to school by active travel (mostly walking, since the percentage of biking is still relatively small), while 23% commute by public transport, which has much longer mean duration than other modes. 
 
 ```{r table-placeholder, echo=FALSE, warning=FALSE}
-tbl = read.csv("output-data/res-table.csv")
+tbl = read.csv("res-table.csv")
 names(tbl) = c("Quantile", "Pre-reform", "Post-reform", "% change")
 knitr::kable(tbl, row.names = F, caption = "Mean accessibility before and after redistribution")
 ```
@@ -186,9 +162,11 @@ than average enrolment
 
 INCLUDE TABLE MEAN ACCESSIBILITY BEFORE AND AFTER REDISTRIBUTION, INTERPRETATION
 
-# Discussion
-
 # Conclusion
+
+ We conclude that extending the concept of local
+accessibility indicators to education can help to both contest and
+constructively tackle embedded social inequalities.
 
 # References
 
