@@ -82,7 +82,7 @@ The Google Distance Matrix API was used to find the travel times and distances b
 ```{r, message=FALSE, eval=FALSE}
 library(stplanr)
 o = c(-46.31813, -23.38584) # coordinates of origin
-d = c(-46.34078, -23.37746) # coordinates of origin
+d = c(-46.34078, -23.37746) # coordinates of destination
 dist_google(from = o, to = d, mode = "transit")
 ```
 
@@ -96,7 +96,16 @@ result = readRDS("result.Rds")
 ## 1      2962     2118
 ```
 
-The code above takes an origin (`o`) and destination (`d`) and finds the travel time and distance. This is reported as 2962 metres and 2118 seconds (35 minutes) respectively. To ensure that the result was relevant to school travel, the times were calculated for arrival time at 9am on a weekday. The function was repeated for all origin-destination pairs.
+The code above takes an origin (`o`) and destination (`d`) and finds the travel time and distance. This is reported as 2962 metres and 2118 seconds (35 minutes) respectively. To ensure that the result was relevant to school travel, the times were calculated for arrival time at 9am on a weekday. The function was repeated for all origin-destination pairs. To ensure the correct OD data was being generated, the results were plotted on an interactive map (Figure xx). The results show the high variability of route distance vs Euclidean distance ('circuity'), providing further evidence of inequalities in public transport provision in the city (Figure xx).
+
+```{r , echo=FALSE, fig.cap="Visual representation of the 12,697 OD pairs routed through the Google Distance Matrix API on an interactive map in RStudio, an open source data analysis platform.", out.width="100%"}
+knitr::include_graphics("od-map.png")
+```
+
+```{r euclid, echo=FALSE, fig.cap="Euclidean (straight line) vs public transport distances resulting from routing the 12,697 OD pairs of interest through the Google Distance Matrix API.", out.width="100%"}
+knitr::include_graphics("public-vs-euclid-dists.png")
+```
+
 
 # Initial findings
 
@@ -125,6 +134,8 @@ knitr::kable(tbl, row.names = F, caption = "Mean accessibility before and after 
 ```
 
 Although the mean duration of travel to school remained stable over the period 1997-2007 ([@de2015]), they could increase as a result of several factors relevant to the SPMR, including sub-urbanization of particular demographic groups, such as those with higher income; increase in the size of schools leading to an increase in school's catchment area; less than proportional increase in schools in high population growth areas with poor connectivity; and institutional changes towards more flexible school choice [@easton2015]. 
+
+\newpage
 
 # Method: measuring school accessibility
 
