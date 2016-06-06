@@ -118,9 +118,9 @@ knitr::include_graphics(c("enrol.png"))
 Table 1 shows the model split by type of secondary school student. (FOOTNOTE the source of this information is the 2007 Origin-Destination Household Travel Survey (O-D Survey), carried out by the São Paulo Metropolitan Transport Authority Mêtro. We focus on trips made by secondary school students with an indicated motive ``education'' at the destination. The total number of trips (excluding missing values) was 11,845. Of these, 5.5 percent were multimodal. In those cases, we assign the mode of the trip leg with the largest duration. We add all trip leg durations (in minutes) to obtain the total trip duration.) Clearly, secondary school students attending private schools disproportionally travel by car, compared to public school students (9% versus 47%), even though higher income areas are better served by public transport. This is in line with the findings of @de2015. Around 67% of public school students commute to school by active travel (mostly walking, since the percentage of biking is still relatively small), while 23% commute by public transport, which has much longer mean duration than other modes. 
 
 ```{r table-placeholder, echo=FALSE, warning=FALSE}
-tbl = read.csv("public.csv")
-names(tbl) = c("Mode", "Percent", "Duration (min)")
-knitr::kable(tbl, row.names = T, caption = "Modal split by type of secondary school")
+# tbl = read.csv("public.csv")
+# names(tbl) = c("Mode", "Percent", "Duration (min)")
+# knitr::kable(tbl, row.names = T, caption = "Modal split by type of secondary school")
 ```
 
 Although the mean duration of travel to school remained stable over the period 1997-2007 [@de2015], they could increase as a result of several factors relevant to the SPMR, including sub-urbanization of particular demographic groups, such as those with higher income; increase in the size of schools leading to an increase in school's catchment area; less than proportional increase in schools in high population growth areas with poor connectivity; and institutional changes towards more flexible school choice [@easton2015]. 
@@ -162,13 +162,13 @@ We calculate both measures for commutes to school by public transport. We set a 
 Figure XX shows the spatial distribution of the cumulative-opportunity measure. The index has a mean value of 3,777, which indicates that for teens residing in the average area, there are 3,777 school seats that can be reached within a journey by public transport of up to 30 minutes. The standard deviation is 3,485 indicates large variation in the level of accessibility across areas. As can be seen on the Figure XX, areas with low accessibility include not only the expaded financial business district located on the central south west area, where there are not many teens or schools to start with (see Figures XX and XX), but also areas with deficient public transport provision, such as some north and south eastern areas.           
 
 ```{r, echo=FALSE, fig.cap="Cumulative opportunity index", out.width="70%"}
-knitr::include_graphics(c("cum_index.png"))
+# knitr::include_graphics(c("cum_index.png"))
 ``` 
 
 Figure XX shows the spatial distribution of the competitive accessibility measure. Although it largely follows the distribution of the cumulative index, it corrects the value in some areas based on the place of residence of students across the SPRM. To interpret the value of the index, recall that if all students in an area attended secondary schools in public secondary schools in their area (i.e., no student would travel outside her own area to attend school), the index would take the value of 1. Then, in areas with a value lower than one, the provision of public schools and public transport is such that there is local underprovision, in the sense that the number of schools seats that can be reached from the area is smaller than the number of teens that can potentially reach the area (the opposite is true for values higher than one). Note that some relatively close by areas, especially in the eastern part of the city, have striking differences in the level of accessibility. In some cases, an area can have twice the level of accessibility than the most proximate area. This can be due to differences in the local provision of public schools, public transport or the number of students living within the reach of the areas.   
 
 ```{r, echo=FALSE, fig.cap="Competitive accessibility index", out.width="70%"}
-knitr::include_graphics(c("comp_index.png"))
+# knitr::include_graphics(c("comp_index.png"))
 ``` 
 
 To understand the effects of changes in public school provision on school accessiblity, we conduct a comparative static analysis using our competitive index. To simulate the effects of a policy that seeks to spatially concentrate students in larger public schools by closing down smaller schools, we assign students in areas with lower than average enrolment to the next area with higher than average enrolment, while keeping the distribution of teens and public transport constant. We then compare the changes in school accessibility for different quartiles before and after this change. Table XX summarizes the results.  
