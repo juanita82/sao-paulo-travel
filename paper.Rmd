@@ -4,11 +4,11 @@ title: 'The unequal distribution of access to education and transport: insights 
 author: Ana I. Moreno-Monroy (Universitat Rovira i Virgili), Robin Lovelace (University
   of Leeds)  and Frederico R. Ramos (Fundação Getulio Vargas)
 output:
-  word_document: default
   pdf_document:
     keep_tex: yes
   html_document:
     keep_md: yes
+  word_document: default
 bibliography: school-access-bib.bib
 ---
 
@@ -115,7 +115,8 @@ Enrolment in public secondary schools is more dispersed spatially, as in princip
 knitr::include_graphics(c("enrol.png"))
 ``` 
 
-Table 1 shows the model split by type of secondary school student. (FOOTNOTE the source of this information is the 2007 Origin-Destination Household Travel Survey (O-D Survey), carried out by the São Paulo Metropolitan Transport Authority Mêtro. We focus on trips made by secondary school students with an indicated motive ``education'' at the destination. The total number of trips (excluding missing values) was 11,845. Of these, 5.5 percent were multimodal. In those cases, we assign the mode of the trip leg with the largest duration. We add all trip leg durations (in minutes) to obtain the total trip duration.) Clearly, secondary school students attending private schools disproportionally travel by car, compared to public school students (9% versus 47%), even though higher income areas are better served by public transport. This is in line with the findings of @de2015. Around 67% of public school students commute to school by active travel (mostly walking, since the percentage of biking is still relatively small), while 23% commute by public transport, which has much longer mean duration than other modes. 
+Table 1 shows the model split by type of secondary school student.^[The source of this information is the 2007 Origin-Destination Household Travel Survey (O-D Survey), carried out by the São Paulo Metropolitan Transport Authority Mêtro. We focus on trips made by secondary school students with an indicated motive ``education'' at the destination. The total number of trips (excluding missing values) was 11,845. Of these, 5.5 percent were multimodal. In those cases, we assign the mode of the trip leg with the largest duration. We add all trip leg durations (in minutes) to obtain the total trip duration.]
+Clearly, secondary school students attending private schools disproportionally travel by car, compared to public school students (9% versus 47%), even though higher income areas are better served by public transport. This is in line with the findings of @de2015. Around 67% of public school students commute to school by active travel (mostly walking, since the percentage of biking is still relatively small), while 23% commute by public transport, which has much longer mean duration than other modes. 
 
 ```{r table-placeholder, echo=FALSE, warning=FALSE}
 # tbl = read.csv("public.csv")
