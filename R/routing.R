@@ -73,7 +73,7 @@ l$dist_hav_km = l$dist_hav / 1000
 # plotting
 l$dist_band = cut(l$dist_hav_km, breaks = quantile(l$dist_hav_km))
 l$color = cut(l$dist_hav_km, breaks = quantile(l$dist_hav_km),
-              labels = c("green", "blue", "yellow", "red"))
+              labels = c("green", "blue", "orange", "red"))
 l$color = as.character(l$color)
 plot(ldff$dist_hav / 1000, ldff$distances / 1000,
     ylab = "Public transport distance (km)",
@@ -97,3 +97,4 @@ tm_shape(osm_tiles) +
 qtm(l, line.col = "dist_hav_km")
 
 write.csv(ldff, "output-data/sample-time-od-out.csv")
+l = read.csv("output-data/sample-time-od-out.csv")
