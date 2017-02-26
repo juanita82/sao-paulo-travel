@@ -179,7 +179,21 @@ number of schools seats that can be reached within a 30 minute journey
 by public transport, and then build a competitive measure that takes
 into account the place of residency of teens. Travel-to-school times by
 public transport are based on actual commuting times obtained through
-the Google Matrix Distance API. We calculate these measures for 633
+use of routing algorithms provided on-line through an application
+programming interface (API).
+
+For this work we used the Google Matrix Distance API, a multi-modal
+real-time travel data provider. 
+The API was used in preference to other options,
+such as Routino, described in a paper by Singleton (2014)
+because its
+ease of use and performance. The Google Distance Matrix
+API returns
+route distance, price and times for journeys between origins and
+destinations, provided either as Longitude/Latidue pairs or
+as text strings to be 'geocoded' (converted to geographical location).
+
+We calculate these measures for 633
 areas within the SPMR. We use the competitive measure to simulate the
 impact of a policy change in the location of public secondary schools,
 in order to, first, understand the extent of spatial inequalities in
@@ -735,6 +749,9 @@ Mielke, Fabiana Maluf Rabacow, and Leandro F{ó}rnias Machado de Rezende.
 2015. ``Changes in Travel to School Patterns Among Children and
 Adolescents in the São Paulo Metropolitan Area, Brazil, 1997--2007.''
 \emph{Journal of Transport \& Health} 2 (2). Elsevier: 143--50.
+
+Singleton, Alex. 2014. ``A GIS approach to modelling CO2 emissions associated with the pupil-school commute.'' \emph{International Journal of Geographical Information Science} 28, 256–273. doi:10.1080/13658816.2013.832765
+
 
 Shen, Qing. 1998. ``Location Characteristics of Inner-City Neighborhoods
 and Employment Accessibility of Low-Wage Workers.'' \emph{Environment
