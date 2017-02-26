@@ -179,15 +179,18 @@ number of schools seats that can be reached within a 30 minute journey
 by public transport, and then build a competitive measure that takes
 into account the place of residency of teens. Travel-to-school times by
 public transport are based on actual commuting times obtained through
-use of routing algorithms provided on-line through an application
-programming interface (API).
+use of routing algorithms provided on-line through an on-line service. 
 
-For this work we used the Google Matrix Distance API, a multi-modal
-real-time travel data provider. 
+For this work we used the Google Matrix Distance API
+(API stands for `application programming interface' and is used for
+compter-computer communication over the web), a multi-modal
+real-time travel data provider (see https://developers.google.com/maps/documentation/distance-matrix/). 
 The API was used in preference to other options,
-such as Routino, described in a paper by Singleton (2014)
+such as Routino, described in a paper by Singleton (2014),
+and the OpenStreetMap Routing Machine (OSRM)
 because its
-ease of use and performance. The Google Distance Matrix
+ease of use (requiring no new software to be installed locally)
+and performance: the Google Distance Matrix
 API returns
 route distance, price and times for journeys between origins and
 destinations, provided either as Longitude/Latidue pairs or
